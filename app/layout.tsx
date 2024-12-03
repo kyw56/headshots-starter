@@ -1,3 +1,4 @@
+// app/layout.tsx
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "@/components/ui/toaster";
@@ -6,13 +7,17 @@ import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
-  title: "Headshots AI",
-  description: "Generate awesome headshots in minutes using AI",
+  title: "GIST 면접 AI",
+  description: "AI 기반 GIST 맞춤형 면접 연습 서비스",
 };
 
-export default function RootLayout({ children }: any) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body className="min-h-screen flex flex-col">
         <section>
           <Suspense
